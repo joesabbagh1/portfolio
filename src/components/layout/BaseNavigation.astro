@@ -10,6 +10,12 @@ const socialIcons = [
     url: "https://github.com/joesabbagh1",
     icon: "i-uil-github",
   },
+
+  {
+    name: "LinkedIn",
+    url: "https://www.linkedin.com/in/elianvancutsem",
+    icon: "i-uil-linkedin",
+  },
 ]
 
 interface Props {
@@ -25,7 +31,6 @@ const { pageTitle } = Astro.props
     <p class="righteous md:text-5xl">Joe Sabbagh</p>
   </a>
   <nav class="hidden md:inline-block">
-    <h2 class="hidden">Navigation</h2>
     <ul class="flex gap-8 poppins">
       {
         navigationItems.map((item) => (
@@ -44,8 +49,10 @@ const { pageTitle } = Astro.props
         <a
           class="text-lg font-medium hover:text-green hover:underline transition-all duration-150 ease-in-out"
           href="/public/resume.pdf"
-          download="Joe_Sabbagh_CV">Resume</a
+          download="Joe_Sabbagh_CV"
         >
+          Resume
+        </a>
       </li>
       {
         socialIcons.map((item) => (
@@ -64,9 +71,8 @@ const { pageTitle } = Astro.props
     </ul>
   </nav>
   <nav class="md:hidden flex">
-    <h2 class="hidden">Mobile Navigation</h2>
     <ul>
-      <li><a href="/blog/">Blog</a></li>
+      <li><a href="/projects/">Projects</a></li>
     </ul>
   </nav>
 </header>

@@ -6,22 +6,6 @@ import MobileSocials from "@components/home/MobileSocials.astro"
 // import { Button } from "@eliancodes/brutal-ui"
 import { Card } from "@eliancodes/brutal-ui"
 
-// const builtWith = [
-//   { name: "Astro", url: "https://astro.build/" },
-//   { name: "UnoCSS", url: "https://uno.antfu.me/" },
-//   {
-//     name: "Content Collections",
-//     url: "https://docs.astro.build/en/guides/content-collections/",
-//   },
-//   { name: "RSS", url: "https://docs.astro.build/en/guides/rss/" },
-//   {
-//     name: "Sitemap",
-//     url: "https://docs.astro.build/en/guides/integrations-guide/sitemap/",
-//   },
-//   { name: "Vercel", url: "https://vercel.com" },
-//   { name: "TypeScript", url: "https://www.typescriptlang.org/" },
-// ]
-
 const Languages = ["JavaScript", "TypeScript", "Java", "bash", "C#", "C++", "C"]
 
 const FrontEnd = ["HTML/CSS", "React", "Next", "Vue", "Tailwind"]
@@ -31,11 +15,7 @@ const BackEnd = ["Node", "Express", "Trpc", ".NET", "SQL"]
 const DevOps = ["AWS", "Docker", "Git"]
 ---
 
-<Layout
-  title="Home"
-  pageTitle="Brutal Theme | Home"
-  description="Brutal is a minimalistic, neobrutalism theme for Astro."
->
+<Layout title="Home" pageTitle="Home" description="Portfolio showcase">
   <main class="bg-pink p-6">
     <MobileSocials />
     <section id="about" class="mt-4">
@@ -48,7 +28,7 @@ const DevOps = ["AWS", "Docker", "Git"]
             </p>
             <p class="mt-2 outfit text-xl md:text-2xl lg:text-4xl">
               Full Stack developer, passionate about the web, and currently
-              learning different DevOps technologies. Also trying to master vim.
+              learning different DevOps technologies.
             </p>
           </div>
         </Card>

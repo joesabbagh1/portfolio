@@ -12,29 +12,23 @@ const { post } = Astro.props
 ---
 
 <SummaryCard title={post.data.title} description={post.data.description}>
-  <div class="hidden sm:inline-block">
-    <p class="poppins mt-4">Built with:</p>
+  <div class="flex justify-end my-4">
+    <Button href={`/blog/${post.slug}/`}>Source Code &rarr;</Button>
+  </div>
+  <div>
+    <p class="poppins">Built with:</p>
     <div class="flex justify-between items-center">
       <ul class="flex gap-4 mt-2">
         {
           post.data.tags.map((tag) => {
             return (
-              <li>
-                <a class="sanchez">
-                  <Pill>{tag}</Pill>
-                </a>
-              </li>
+              <a class="sanchez">
+                <Pill>{tag}</Pill>
+              </a>
             )
           })
         }
       </ul>
-      {
-        post.data.draft && (
-          <span class="bg-green rounded-full border-2 py-1 px-4 text-sm border-black card-shadow">
-            Draft
-          </span>
-        )
-      }
     </div>
   </div>
 </SummaryCard>

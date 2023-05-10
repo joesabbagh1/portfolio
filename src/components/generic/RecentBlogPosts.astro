@@ -13,8 +13,6 @@ const { count } = Astro.props
 const posts = await getCollection("projects").then((posts) =>
   posts.reverse().slice(0, count ?? 3)
 )
-
-console.log(posts)
 ---
 
 <section class="mt-8">

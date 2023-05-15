@@ -1,45 +1,14 @@
 ---
-title: Rating App
-description: Lorem markdownum longo os thyrso telum, continet servat fetus nymphae, vox nocte sedesque, decimo. Omnia esse, quam sive; conplevit illis indestrictus admovit dedit sub quod protectus, impedit non.
+title: Review and Rating Platform
+description: |-
+  Developed and designed a user-friendly website that allows users to review, rate and save their favorite restaurants, coffee shops and bars.
+
+  I used Next.js, Tailwind, tRPC and Prisma for my stack. Deployed the website using AWS ECS on an EC2 instance using Docker for containerization, and Postgres for the database. Images were stored in an S3 bucket and served with CloudFront.
 tags:
   - Next.js
   - Trpc
   - Prisma
   - Postgres
 layout: ../../layouts/Project.astro
+link: https://github.com/joesabbagh1/rating-app
 ---
-
-## Deorum petiit ignis
-
-Lorem markdownum longo os thyrso telum, continet servat fetus nymphae, _vox
-nocte sedesque_, decimo. Omnia esse, quam sive; conplevit illis indestrictus
-admovit dedit sub quod protectus, impedit non.
-
-## Iovis late orbem Perseus sunt
-
-Aras reperire, sui motis correpti coniunx Onetor amore ferire lacertis, petiit.
-Bis pallor et mecum me, igne patruelibus _tendebam_, vultu sterilique terruerat
-_tempore_ medium aera **eadem Mittor**.
-
-- Non turba loca dederunt primordia ineamus Dictys
-- Tanti amat mundus sedula
-- Potuissent aetas parili coniuge se lumina breve
-- Tamen ille crepitantibus ulla coeperunt quibus iugulo
-- Pindusque solacia luctataque felix
-
-## Longum minus sic saepe
-
-Genu cupiens quoque: cum dolor: sollicitive cantu, et piae Leuconoe, huius non
-nil tuli Peleusque rauca. Et alvum cuncti Hippodamas meritis nec coniunx ausa,
-pete. Congestaque nisi nullus poena. Tanto cum, curvis vulnera quod optatis,
-trahens conplexa saepe.
-
-Hominum quo. Signa germanaeque iuvat at feruntur precantibus corpus praebuerat
-excipit mixtaeque inferior, haec percepit regum: nec nec sit ferenti.
-
-## Geminas namque quod referitur argenteus aderat superstes
-
-Insistere pugno. Cum morae vigilantibus dulces Cycnus: neque cum sororis.
-
-Hac Aestas solet docebo tandem tamquam omnis vitiantur mitte, vatis in animique
-infelix passimque. Superasset onus.

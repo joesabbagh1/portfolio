@@ -11,10 +11,10 @@ const { posts } = Astro.props
 
 <ul class="grid md:grid-cols-2 lg:grid-cols-2 gap-8">
   {
-    posts.map((post) => {
+    posts.map((post, i) => {
       return (
         <li>
-          <BlogSummaryCard post={post} />
+          <BlogSummaryCard post={post} index={i} />
         </li>
       )
     })

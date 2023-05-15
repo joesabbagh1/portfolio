@@ -1,0 +1,19 @@
+---
+interface Props {
+  description: string
+}
+
+const { description } = Astro.props
+---
+
+<p class="poppins md:text-lg limitClass">{description}</p>
+<button id="show">show more</button>
+
+<script>
+  const button = document.getElementById("show")
+  console.log(button)
+  button.addEventListener("click", () => {
+    alert("Button was clicked!")
+    console.log(12342134)
+  })
+</script>

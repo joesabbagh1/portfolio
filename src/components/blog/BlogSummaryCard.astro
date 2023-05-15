@@ -6,12 +6,17 @@ import { Button } from "@eliancodes/brutal-ui"
 
 interface Props {
   post: CollectionEntry<"projects">
+  index: number
 }
 
-const { post } = Astro.props
+const { post, index } = Astro.props
 ---
 
-<SummaryCard title={post.data.title} description={post.data.description}>
+<SummaryCard
+  title={post.data.title}
+  description={post.data.description}
+  index={index}
+>
   <div class="flex justify-end my-4">
     <Button href={`/blog/${post.slug}/`}>Source Code &rarr;</Button>
   </div>

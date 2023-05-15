@@ -13,7 +13,7 @@ const { post } = Astro.props
 
 <SummaryCard title={post.data.title} description={post.data.description}>
   <div class="flex justify-end my-4">
-    <Button href={`/blog/${post.slug}/`}>Source Code &rarr;</Button>
+    <Button href={post.data.link} target="_blank">Source Code &rarr;</Button>
   </div>
   <div>
     <p class="poppins">Built with:</p>

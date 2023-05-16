@@ -16,15 +16,18 @@ const posts = await getCollection("projects").then((posts) =>
 ---
 
 <section class="mt-8">
-  <Card>
+  <Card color="#facc15">
     <div class="flex justify-between items-start">
-      <h2 class="text-2xl md:text-4xl lg:text-6xl mb-8 dm-serif">
+      <h2 class="text-4xl md:text-5xl lg:text-7xl mb-8 dm-serif">
         Recent Projects
       </h2>
-      <div class="md:block">
+      <div class="md:block hidden">
         <Button href="/projects/">Go to projects &rarr;</Button>
       </div>
     </div>
     <BlogList posts={posts} />
+    <div class="flex justify-end mt-8 md:hidden">
+      <Button href="/projects/">Go to projects &rarr;</Button>
+    </div>
   </Card>
 </section>

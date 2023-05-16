@@ -39,7 +39,7 @@ import { Button, Card } from "@eliancodes/brutal-ui"
     </div>
     <div class="flex flex-col gap-4 md:gap-10">
       <h1 class="text-4xl md:text-6xl font-semibold">Send me a message</h1>
-      <Card>
+      <Card color="#f472b6">
         <form id="contact-form" class="flex flex-col gap-3">
           <input type="hidden" name="contact_number" />
           <div class="flex flex-col gap-6">
@@ -109,7 +109,6 @@ import { Button, Card } from "@eliancodes/brutal-ui"
           "textarea[name=message]"
         ).value
 
-        console.log(22222)
         if (!user_name || !user_email || !message) {
           return false
         }

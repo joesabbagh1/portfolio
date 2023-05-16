@@ -20,13 +20,13 @@ const DevOps = ["AWS", "Docker", "Git"]
     <MobileSocials />
     <section id="about" class="mt-4">
       <div>
-        <Card>
+        <Card color="#22d3ee">
           <div class="flex flex-col justify-between items-start gap-4">
-            <p class="outfit text-2xl md:text-5xl lg:text-7xl">
+            <p class="outfit text-4xl md:text-5xl lg:text-7xl">
               About
               <span class="text-white">Me</span>
             </p>
-            <p class="mt-2 outfit text-xl md:text-2xl lg:text-4xl">
+            <p class="md:mt-2 outfit text-xl md:text-2xl lg:text-4xl">
               Full Stack developer, passionate about the web, and currently
               learning different DevOps technologies.
             </p>
@@ -37,47 +37,49 @@ const DevOps = ["AWS", "Docker", "Git"]
       <RecentBlogPosts />
 
       <section id="skills" class="mt-8">
-        <Card>
-          <h2 class="text-2xl md:text-4xl lg:text-6xl mb-8 poppins">
+        <Card color="#a3e635">
+          <h2 class="text-4xl md:text-5xl lg:text-7xl mb-8 poppins">
             Technical Skills
           </h2>
           <div
             class="grid grid-cols-2 md:grid-cols-4 grid-justify-between items-start gap-14"
           >
-            <Card>
-              <div class="px-4">
-                <h1 class="text-lg md:text-3xl lg:text-5xl dm-serif">
+            <Card color="#facc15">
+              <div class="px-2 md:px-4">
+                <h1 class="text-2xl md:text-3xl lg:text-5xl dm-serif">
                   Languages
                 </h1>
-                <ul class="mt-4 text-md md:text-lg lg:text-3xl">
+                <ul class="mt-2 md:mt-4 text-xl md:text-2xl lg:text-3xl">
                   {Languages.map((item) => <li class="sanchez">{item}</li>)}
                 </ul>
               </div>
             </Card>
-            <Card>
-              <div class="px-4">
-                <h1 class="text-lg md:text-3xl lg:text-5xl dm-serif">
+            <Card color="#fb923c">
+              <div class="px-2 md:px-4">
+                <h1 class="text-2xl md:text-3xl lg:text-5xl dm-serif">
                   Front End
                 </h1>
-                <ul class="mt-4 text-md md:text-lg lg:text-3xl">
+                <ul class="mt-2 md:mt-4 text-xl md:text-2xl lg:text-3xl">
                   {FrontEnd.map((item) => <li class="sanchez">{item}</li>)}
                 </ul>
               </div>
             </Card>
-            <Card>
-              <div class="px-4">
-                <h1 class="text-lg md:text-3xl lg:text-5xl dm-serif">
+            <Card color="#e879f9">
+              <div class="px-2 md:px-4">
+                <h1 class="text-2xl md:text-3xl lg:text-5xl dm-serif">
                   Back End
                 </h1>
-                <ul class="mt-4 text-md md:text-lg lg:text-3xl">
+                <ul class="mt-2 md:mt-4 text-xl md:text-2xl lg:text-3xl">
                   {BackEnd.map((item) => <li class="sanchez">{item}</li>)}
                 </ul>
               </div>
             </Card>
-            <Card>
-              <div class="px-4">
-                <h1 class="text-lg md:text-3xl lg:text-5xl dm-serif">DevOps</h1>
-                <ul class="mt-4 text-md md:text-lg lg:text-3xl">
+            <Card color="#38bdf8">
+              <div class="px-2 md:px-4">
+                <h1 class="text-2xl md:text-3xl lg:text-5xl dm-serif">
+                  DevOps
+                </h1>
+                <ul class="mt-2 md:mt-4 text-xl md:text-2xl lg:text-3xl">
                   {DevOps.map((item) => <li class="sanchez">{item}</li>)}
                 </ul>
               </div>

@@ -1,13 +1,132 @@
 ---
+import { Button, Card } from "@eliancodes/brutal-ui"
 ---
 
-<footer class='bg-black text-white p-6'>
-  <h2 class='hidden'>Footer</h2>
-  <p class='outfit'>
-    Brutal theme for Astro - by <a
-      href='https://www.elian.codes/'
-      target='_blank'
-      class='text-blue'>ElianCodes</a
-    >
-  </p>
+<footer class="border-t-4 border-black bg-white p-6 pt-10 md:px-30">
+  <div class="md:grid md:grid-cols-2 justify-center">
+    <div class="md:flex md:flex-col gap-10 hidden">
+      <h1 class="text-6xl">Catch me on</h1>
+      <div class="flex items-center">
+        <a
+          href="https://github.com/joesabbagh1"
+          class="flex gap-6 hover:text-green hover:underline transition-all duration-150 ease-in-out"
+          target="_blank"
+        >
+          <div class:list={["i-uil-github", "w-10 h-10"]}></div>
+          <h2 class="text-4xl">Github</h2>
+        </a>
+      </div>
+      <div class="flex items-center">
+        <a
+          href="https://github.com/joesabbagh1"
+          class="flex gap-6 hover:text-green hover:underline transition-all duration-150 ease-in-out"
+          target="_blank"
+        >
+          <div class:list={["i-uil-linkedin", "w-10 h-10"]}></div>
+          <h2 class="text-4xl">LinkedIn</h2>
+        </a>
+      </div>
+      <div class="flex items-center">
+        <a
+          href="mailto:joe.sabbagh2001@gmail.com"
+          class="flex gap-6 hover:text-green hover:underline transition-all duration-150 ease-in-out"
+          target="_blank"
+        >
+          <div class:list={["i-uil-mailbox", "w-10 h-10"]}></div>
+          <h2 class="text-4xl">Email</h2>
+        </a>
+      </div>
+    </div>
+    <div class="flex flex-col gap-4 md:gap-10">
+      <h1 class="text-4xl md:text-6xl font-semibold">Send me a message</h1>
+      <Card>
+        <form id="contact-form" class="flex flex-col gap-3">
+          <input type="hidden" name="contact_number" />
+          <div class="flex flex-col gap-6">
+            <div class="flex flex-justify-between gap-6 poppins">
+              <h2 class="text-2xl md:text-3xl font-medium">Name</h2>
+              <input
+                type="text"
+                name="user_name"
+                class="p-1 border-3 border-black rd-2 outline-0 w-65 md:w-md"
+              />
+            </div>
+            <div class="flex flex-justify-between gap-6">
+              <h2 class="text-2xl md:text-3xl font-medium">Email</h2>
+              <input
+                type="email"
+                name="user_email"
+                class="p-1 border-3 border-black rd-2 outline-0 w-65 md:w-md"
+              />
+            </div>
+            <div class="flex flex-justify-between gap-6">
+              <h2 class="text-2xl md:text-3xl font-medium">Message</h2>
+              <textarea
+                name="message"
+                class="p-1 border-3 border-black rd-2 outline-0 w-65 md:w-md"
+              ></textarea>
+            </div>
+          </div>
+          <div class="flex justify-between items-center gap-6">
+            <Button>
+              <input type="submit" value="Send Email" />
+            </Button>
+            <div class="flex justify-start w-65 md:w-md">
+              <h2 class="text-xl font-semibold poppins hidden" id="sent">
+                Email Sent!
+              </h2>
+            </div>
+          </div>
+        </form>
+      </Card>
+    </div>
+  </div>
 </footer>
+
+<script
+  type="text/javascript"
+  src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"
+></script>
+<script type="text/javascript">
+  ;(function () {
+    emailjs.init("Vb33xvN_VKvox76Hz")
+  })()
+</script>
+<script type="text/javascript">
+  window.onload = function () {
+    document
+      .getElementById("contact-form")
+      .addEventListener("submit", function (event) {
+        event.preventDefault()
+
+        const user_name = event.target.querySelector(
+          "input[name=user_name]"
+        ).value
+        const user_email = event.target.querySelector(
+          "input[name=user_email]"
+        ).value
+        const message = event.target.querySelector(
+          "textarea[name=message]"
+        ).value
+
+        console.log(22222)
+        if (!user_name || !user_email || !message) {
+          return false
+        }
+
+        this.contact_number.value = (Math.random() * 100000) | 0
+
+        document.getElementById("sent").innerHTML = "Sending"
+        document.getElementById("sent").style.display = "block"
+
+        emailjs.sendForm("service_pnqgj0n", "contact_form", this).then(
+          function () {
+            document.getElementById("sent").innerHTML = "Sent!"
+          },
+          function (error) {
+            console.log("FAILED...", error)
+          }
+        )
+      })
+  }
+</script>

@@ -31,7 +31,6 @@ const { title, description } = Astro.props
       const text = paragraph.textContent.trim()
       const numEmptyLines = text.match(/\n\s*\n/g)?.length || 0
       const numLines = Math.ceil(height / lineHeight) + numEmptyLines
-      console.log("Number of lines:", numLines)
 
       let more = false
 

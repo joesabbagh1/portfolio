@@ -12,15 +12,15 @@ const { post } = Astro.props
 ---
 
 <SummaryCard title={post.data.title} description={post.data.description}>
-  <div class="flex justify-end my-4">
-    <Button href={post.data.link} target="_blank">Source Code &rarr;</Button>
-  </div>
   <div class="hidden sm:inline-block">
+    <div class="flex justify-end">
+      <Button href={post.data.link} target="_blank">Source Code &rarr;</Button>
+    </div>
     <p class="poppins">Built with:</p>
     <div class="flex justify-between items-center">
       <ul class="flex gap-4 mt-2">
         {
-          post.data.tags.map((tag) => {
+          post.data.tags.map((tag: string) => {
             return (
               <a class="sanchez">
                 <Pill>{tag}</Pill>
